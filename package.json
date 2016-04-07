@@ -1,0 +1,33 @@
+{
+  "name": "logo-vote-system",
+  "version": "1.0.0",
+  "description": "A simple vote system to vote on multiple logos.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sv-helloworld/logo-vote-system.git"
+  },
+  "keywords": [
+    "sv-helloworld",
+    "logo",
+    "voting"
+  ],
+  "author": "Studievereniging 'Hello World' <info@svhelloworld.nl>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sv-helloworld/logo-vote-system/issues"
+  },
+  "homepage": "https://github.com/sv-helloworld/logo-vote-system#readme",
+  "devDependencies": {
+    "gulp-compass": "^2.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
+}

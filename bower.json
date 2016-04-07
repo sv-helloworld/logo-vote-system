@@ -1,0 +1,31 @@
+{
+  "name": "logo-vote-system",
+  "description": "A simple vote system to vote on multiple logos.",
+  "main": "index.php",
+  "authors": [
+    "Studievereniging 'Hello World' <info@svhelloworld.nl>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "sv-helloworld",
+    "logo",
+    "voting"
+  ],
+  "homepage": "https://github.com/sv-helloworld/logo-vote-system",
+  "moduleType": [
+    "amd"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.3",
+    "angular-chart.js": "~0.9.0"
+  }
+}
