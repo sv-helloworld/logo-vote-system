@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no" />
 
         <!-- Bootstrap and other CSS -->
-        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400|Open+Sans:400,600" />
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" />
+        <link rel="stylesheet" href="/bower_components/angular-chart.js/dist/angular-chart.css">
         <link rel="stylesheet" type="text/css" href="/css/style.css">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -20,14 +21,34 @@
     </head>
 
     <body ng-controller="VoteController">
-        {% block content %}{% endblock %}
+
+        <!-- Main -->
+        <main>
+            <!-- Wrapper -->
+            <div id="wrapper">
+                <div class="container">
+
+                    <!-- Content -->
+                    <section id="content">
+                        <div class="inner">
+                            {% block content %}{% endblock %}
+                        </div>
+                    </section>
+
+                    <!-- Footer -->
+                    <footer id="footer">
+                        <span>Studievereniging 'Hello World'</span>
+                    </footer>
+
+                </div>
+            </div>
+        </main>
 
         <!-- Scripts -->
         <script src="/bower_components/angular/angular.min.js"></script>
         <script src="/bower_components/Chart.js/Chart.min.js"></script>
         <script src="/bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
         <script src="/js/dist/app.js"></script>
-        <script src="/js/dist/controllers.js"></script>
     </body>
 </html>
 

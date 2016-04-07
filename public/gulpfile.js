@@ -27,7 +27,10 @@ gulp.task('compass', function() {
 
 gulp.task('compress', function() {
     return gulp.src('./js/*.js')
-        .pipe(uglify())
+        .pipe(uglify().on('error', function(error) {
+            gutil.log(error);
+            this.emit('end');
+        }))
         .pipe(gulp.dest('./js/dist'))
         .pipe(livereload());
 });

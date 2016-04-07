@@ -43,9 +43,24 @@ $container['logger'] = function ($c) {
 };
 
 // -----------------------------------------------------------------------------
+// Helper factories
+// -----------------------------------------------------------------------------
+$container[App\Helper\StatisticsHelper::class] = function ($c) {
+    return new App\Helper\StatisticsHelper($c->get('database'));
+};
+
+// -----------------------------------------------------------------------------
 // Action factories
 // -----------------------------------------------------------------------------
 
 $container[App\Action\IndexAction::class] = function ($c) {
     return new App\Action\IndexAction($c->get('view'), $c->get('database'), $c->get('logger'));
+};
+
+$container[App\Action\VoteAction::class] = function ($c) {
+    return new App\Action\VoteAction($c->get('database'), $c->get('logger'), $c->get(App\Helper\StatisticsHelper::class));
+};
+
+$container[App\Action\StatisticsAction::class] = function ($c) {
+    return new App\Action\StatisticsAction($c->get('database'), $c->get('logger'), $c->get(App\Helper\StatisticsHelper::class));
 };

@@ -1,5 +1,52 @@
 {% extends '_base.twig' %}
 
 {% block content %}
-    <h1>{[{ test }]}</h1>
+    <h1>Studievereniging 'Hello World' <small>Zoekt het logo voor de studievereniging!</small></h1>
+    <p>Naar welk logo gaat jouw voorkeur uit? Klik op jouw favoriete logo om te stemmen.</p>
+    <p>Er zijn tot nu toe <strong>{[{ total }]}</strong> stemmen uitgebracht!</p>
+
+    <!-- Vote tiles -->
+    <div id="vote-tiles">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="vote-tile vote-tile-blue" ng-click="vote(1)">
+                    <div class="vote-tile-inner">
+                        <img src="http://placehold.it/350x150" alt="Logo 1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="vote-tile vote-tile-green" ng-click="vote(2)">
+                    <div class="vote-tile-inner">
+                        <img src="http://placehold.it/350x150" alt="Logo 2">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="vote-tile vote-tile-yellow" ng-click="vote(3)">
+                    <div class="vote-tile-inner">
+                        <img src="http://placehold.it/350x150" alt="Logo 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistics -->
+    <div id="statistics">
+        <div class="row">
+            <div class="col-xs-12 col-sm-offset-3 col-sm-6">
+                <div class="statistics-wrapper">
+                    <div class="statistics-wrapper-inner">
+                        <div id="statistics-chart">
+                            <h3>Uitgebrachte stemmen</h3>
+                            <canvas id="doughnut" class="chart chart-doughnut" chart-data="chartData" chart-labels="chartLabels" chart-colours="['#017bc8', '#01c863', '#e2df00']"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

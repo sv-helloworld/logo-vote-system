@@ -1,1 +1,0 @@
-app.controller("VoteController",["$scope",function(o){o.test="Hola!"}]);
