@@ -46,6 +46,6 @@ $container['logger'] = function ($c) {
 // Action factories
 // -----------------------------------------------------------------------------
 
-$container[App\Action\HomeAction::class] = function ($c) {
-    return new App\Action\HomeAction($c->get('view'), $c->get('database'), $c->get('logger'));
+$container[App\Action\IndexAction::class] = function ($c) {
+    return new App\Action\IndexAction($c->get('view'), $c->get('database'), $c->get('logger'));
 };

@@ -17,7 +17,10 @@ gulp.task('compass', function() {
             config_file: './config.rb',
             css: 'css',
             sass: 'sass'
-        }).on('error', gutil.log))
+        }).on('error', function(error) {
+            gutil.log(error);
+            this.emit('end');
+        }))
         .pipe(gulp.dest('css'))
         .pipe(livereload());
 });

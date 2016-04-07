@@ -6,7 +6,7 @@ use Psr\Log\LoggerInterface;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 
-final class HomeAction
+final class IndexAction
 {
     private $view;
     private $db;
@@ -21,9 +21,7 @@ final class HomeAction
 
     public function __invoke(Request $request, Response $response, $args)
     {
-        $this->logger->info("Home page action dispatched");
-        
-        $this->view->render($response, 'home.twig');
+        $this->view->render($response, 'index.twig');
         return $response;
     }
 }
