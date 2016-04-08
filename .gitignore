@@ -1,0 +1,8 @@
+vendor/
+log/*
+cache/*
+.idea/
+app/config.php
+.sass-cache/
+node_modules/
+bower_components/

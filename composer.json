@@ -1,0 +1,26 @@
+{
+    "name": "sv-helloworld/logo-vote-system",
+    "description": "A simple vote system to vote on multiple logos.",
+    "license": "BSD-3-Clause",
+    "type": "project",
+    "keywords": ["sv-helloworld", "logo", "voting"],
+    "authors": [
+        {
+            "name": "Studievereniging 'Hello World'",
+            "email": "info@svhelloworld.nl",
+            "homepage": "http://svhelloworld.nl"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/src"
+        }
+    },
+    "require": {
+        "slim/slim": "^3.0",
+        "slim/twig-view": "^2.0",
+        "slim/flash": "^0.1.0",
+        "monolog/monolog": "^1.13",
+        "joshcam/mysqli-database-class": "dev-master"
+    }
+}
