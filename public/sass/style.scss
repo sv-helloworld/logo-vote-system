@@ -84,6 +84,38 @@ div#wrapper {
     display: table-cell;
 }
 
+// Form
+form#email-form {
+    margin-top: 40px;
+
+    div.input-group {
+        @include transition(box-shadow .4s ease);
+
+        &:hover {
+            @include box-shadow(transparentize(#FFF, 0.6) 0 0 40px);
+        }
+    }
+
+    div.input-group-addon {
+        background: transparentize($blue-color, 0.6);
+        color: #ccc;
+        border: none;
+    }
+
+    input#email {
+        background: transparentize($blue-color, 0.6);
+        color: #ccc;
+        border: none;
+        box-shadow: none;
+        -webkit-appearance: none;
+
+        &::-webkit-input-placeholder, &:-moz-placeholder, &::-moz-placeholder, &:-ms-input-placeholder, &::-ms-input-placeholder {
+            color: #ccc;
+            opacity: 1;
+        }
+    }
+}
+
 // Vote tiles
 div#vote-tiles {
     margin: 80px 0;
@@ -104,8 +136,8 @@ div#vote-tiles {
             }
         }
 
-        &.vote-tile-blue {
-            border-top-color: $blue-color;
+        &.vote-tile-orange {
+            border-top-color: $orange-color;
         }
 
         &.vote-tile-green {
